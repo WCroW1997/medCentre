@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap");
 * {
   padding: 0;
@@ -311,6 +312,7 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+  flex-basis: 23%;
 }
 .team__img {
   width: 100%;
@@ -867,4 +869,869 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contactWrapper {
+  margin-top: 16px;
+}
+.contactWrapper__container {
+  position: relative;
+}
+.contactWrapper__box {
+  padding: 78px 45px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+}
+.contactWrapper__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  color: #fff;
+}
+
+.contactInfo {
+  padding: 64px 0 90px;
+}
+.contactInfo__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 150px;
+}
+.contactInfo__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 24px;
+}
+.contactInfo__box {
+  padding: 20px;
+  background: #e1effb;
+  border-radius: 6px;
+  max-width: 220px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 30%;
+}
+.contactInfo__box img {
+  width: 50px;
+  height: 50px;
+}
+.contactInfo__title {
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  color: #0f52ba;
+  margin: 6px 0 16px;
+}
+.contactInfo__list {
+  list-style-type: none;
+}
+.contactInfo__item, .contactInfo__item a {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+}
+.contactInfo__formBlock {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  background: #f6f9fc;
+  border-radius: 6px;
+  padding: 16px 13px;
+  max-width: 470px;
+  width: 100%;
+}
+.contactInfo__formBlock__desc, .contactInfo__formBlock__link {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Manrope", sans-serif;
+}
+.contactInfo__formBlock__link {
+  color: #0f52ba;
+  font-weight: 500;
+}
+.contactInfo__titleForm {
+  font-size: 24px;
+  color: #434343;
+  font-family: "Manrope", sans-serif;
+}
+.contactInfo__desc {
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #434343;
+  margin-bottom: 35px;
+}
+.contactInfo__form input:not(input[type=button]), .contactInfo__form textarea {
+  border: 1px solid #0f52ba;
+  color: #777;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  background: transparent;
+  border-radius: 6px;
+}
+.contactInfo__form input:not(input[type=button])::-moz-placeholder, .contactInfo__form textarea::-moz-placeholder {
+  font-size: 16px;
+  color: #777;
+}
+.contactInfo__form input:not(input[type=button])::placeholder, .contactInfo__form textarea::placeholder {
+  font-size: 16px;
+  color: #777;
+}
+.contactInfo__form_btn {
+  background: #0f52ba;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.contactInfo__formRating {
+  margin-bottom: 36px;
+}
+
+.contactInfo__formRating {
+  display: flex;
+  flex-direction: row-reverse; /* щоб правильно працювало наведення */
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.contactInfo__formRating input {
+  display: none;
+}
+
+.contactInfo__formRating label {
+  font-size: 40px;
+  color: transparent;
+  -webkit-text-stroke: 2px #0066cc; /* синій контур */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* При наведенні - всі попередні теж фарбуються */
+.contactInfo__formRating label:hover,
+.contactInfo__formRating label:hover ~ label {
+  color: #0066cc;
+}
+
+/* Якщо вибрано зірку - всі попередні теж сині */
+.contactInfo__formRating input:checked ~ label {
+  color: #0066cc;
+}
+
+.contactMap {
+  margin-top: 64px;
+}
+
+.servicesReview {
+  margin-top: 92px;
+}
+
+.services {
+  padding: 140px 0 0;
+}
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr) 1.4fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 100px;
+}
+.services__box {
+  position: relative;
+  color: #fff;
+  border-radius: 6px;
+}
+.services__box_1, .services__box_2, .services__box_3, .services__box_4, .services__box_5, .services__box_6, .services__box_7, .services__box_8, .services__box_9 {
+  background: #0f52ba;
+  padding: 90px 10px 30px;
+}
+.services__box_11 {
+  grid-area: 3/3/4/5;
+}
+.services__icon {
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f6f9fc;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.services__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.services__list {
+  font-family: "Golos Text", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.services__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+.services__item::before {
+  content: "";
+  background: url(./img/icon/arrow.svg) no-repeat center center;
+  width: 10px;
+  height: 12px;
+  background-size: cover;
+  margin-right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services__desc {
+  position: relative;
+  color: #434343;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  margin-top: 100px;
+  font-weight: 700;
+}
+.services__desc::first-letter {
+  margin-left: 48px;
+}
+.services__desc::before {
+  content: "“";
+  position: absolute;
+  font-size: 96px;
+  font-weight: 700;
+  color: #0f52ba;
+  top: -90%;
+}
+
+.aboutWrapper {
+  margin-bottom: 120px;
+}
+.aboutWrapper__box {
+  max-width: 330px;
+  width: 100%;
+  text-align: center;
+}
+.aboutWrapper__title {
+  text-align: left;
+  color: #000;
+  font-weight: 500;
+}
+.aboutWrapper__desc {
+  text-align: left;
+  font-size: 20px;
+  color: #434343;
+}
+.aboutWrapper .blue {
+  color: #0f52ba;
+  font-weight: 600;
+}
+
+.achievements {
+  position: relative;
+}
+.achievements__grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  color: #fff;
+}
+.achievements__container {
+  background: #0f52ba;
+}
+.achievements__titleSection {
+  margin-bottom: 32px;
+}
+.achievements__box {
+  padding: 0 80px;
+  text-align: center;
+}
+.achievements__box:not(:last-of-type) {
+  border-right: 2px solid #e09b13;
+}
+.achievements__title {
+  font-size: 64px;
+  font-weight: 800;
+  font-family: "Manrope", sans-serif;
+}
+.achievements__desc {
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.refer {
+  padding: 92px 0;
+}
+.refer__grid {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 24px;
+}
+.refer__box {
+  display: flex;
+  gap: 20px;
+  border-radius: 6px;
+  background: #e1effb;
+  padding: 20px 20px 30px;
+  width: 100%;
+  flex-basis: 30%;
+}
+.refer__box img {
+  width: 100px;
+  height: 100px;
+}
+.refer__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #0f52ba;
+  margin-bottom: 8px;
+}
+.refer__desc {
+  font-family: "Golos Text", sans-serif;
+  color: #4b554b;
+}
+
+.priceWrapper__title {
+  color: #000;
+}
+
+.price {
+  padding: 64px 0;
+}
+.price__filter {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.price__btn {
+  padding: 8px 50px;
+  max-width: 220px;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  color: #0f52ba;
+  border: 1px solid #0f52ba;
+}
+.price__table {
+  margin-top: 96px;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.price__box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+}
+.price__img {
+  max-width: 220px;
+  width: 100%;
+  background: #e1effb;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price__content {
+  width: 100%;
+}
+.price__title {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 18px;
+}
+.price__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.price__item {
+  margin-left: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  color: #0f52ba;
+  border-bottom: 1px solid #e09b13;
+  position: relative;
+}
+.price__item::before {
+  content: "";
+  background: url(./img/icon/arrow.svg) no-repeat center center;
+  width: 10px;
+  height: 12px;
+  background-size: cover;
+  margin-right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -30px;
+}
+
+.priceContact {
+  margin-bottom: 64px;
+}
+
+.serviceWarning {
+  margin-top: 64px;
+  font-weight: 500;
+  font-family: "Manrope", sans-serif;
+}
+
+.serviceWrapper__content {
+  max-width: 800px;
+}
+.serviceWrapper__block {
+  padding: 100px 40px;
+  background: url(./img/singleServiceBg.png) no-repeat center right, #0f52ba;
+}
+.serviceWrapper__desc {
+  font-family: "Golos Text", sans-serif;
+  font-size: 18px;
+  margin-bottom: 64px;
+}
+
+.serviceContent__title {
+  margin-bottom: 16px;
+}
+.serviceContent__desc {
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 32px;
+}
+.serviceContent__pain {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 32px;
+  gap: 24px;
+}
+.serviceContent__pain__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.serviceContent__pain__label {
+  background: #0f52ba;
+  padding: 12px 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+.serviceContent__pain__label span {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.serviceContent__pain__label::after {
+  content: "";
+  background: url(./img/icon/arrow_down.svg) no-repeat center center;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  bottom: -50%;
+}
+.serviceContent__pain__content {
+  border-radius: 6px;
+  background: #e1effb;
+  padding: 16px;
+}
+.serviceContent__pain__title {
+  color: #0f52ba;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Manrope", sans-serif;
+}
+.serviceContent__pain__list {
+  margin: 6px 0 0 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: "Manrope", sans-serif;
+  color: #434343;
+}
+.serviceContent__grid {
+  margin-top: 64px;
+  margin-bottom: 92px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 44px 24px;
+}
+.serviceContent__box {
+  flex-basis: 48%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border: 2px solid #0f52ba;
+  border-radius: 6px;
+}
+.serviceContent__box img {
+  border-radius: 6px;
+  width: 100%;
+  max-width: 342px;
+}
+.serviceContent__content h3 {
+  text-align: center;
+  font-size: 18px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  color: #0f52ba;
+  margin-bottom: 16px;
+}
+.serviceContent__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 22px;
+  color: #434343;
+  font-family: "Manrope", sans-serif;
+}
+.serviceContent__box3 img, .serviceContent__box4 img {
+  order: 2;
+}
+.serviceContent__box3 ul, .serviceContent__box4 ul {
+  margin-left: 30px;
+}
+.serviceContent__row {
+  margin-bottom: 92px;
+}
+.serviceContent__row__box {
+  background: #0f52ba;
+  color: #fff;
+  flex-basis: 23%;
+}
+.serviceContent__row__box span {
+  font-size: 14px;
+  font-weight: 300;
+}
+.serviceContent__row__box::before {
+  background: #e09b13;
+}
+.serviceContent__row__box::after {
+  content: "";
+  background: url(./img/icon/arrow_down.svg) center center no-repeat;
+  width: 30px;
+  height: 30px;
+  transform: rotate(-90deg);
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+.postWrapper {
+  margin-top: 40px;
+}
+
+.content {
+  padding: 64px 0 92px;
+}
+.content__title {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.content__text {
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.content__text h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0f52ba;
+}
+.content__text p {
+  margin-bottom: 20px;
+  color: #434343;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header__info {
+    gap: 10px;
+  }
+  .wrapper__block {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(./img/IMG_8377.png) no-repeat center right, #0f52ba;
+  }
+  .therapy__block {
+    padding: 20px 40px;
+  }
+  .footer__container {
+    gap: 20px;
+  }
+  .footer__box:first-of-type {
+    flex-basis: 30%;
+  }
+  .contactWrapper__container img,
+  .doctorWrapper__container img,
+  .postWrapper img {
+    width: 100%;
+  }
+  .achievements__box {
+    padding: 0 40px;
+  }
+  .achievements__title {
+    font-size: 40px;
+  }
+  .achievements__desc {
+    font-size: 16px;
+  }
+  .refer__box {
+    flex-direction: column;
+  }
+  .contactInfo__container {
+    gap: 50px;
+  }
+  .contactInfo__box {
+    flex-basis: 48%;
+  }
+  .doctorsState__box {
+    flex-basis: 100%;
+  }
+  .doctorsGaranthy__box {
+    flex-basis: 31%;
+  }
+  .services__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .services__box_11 {
+    grid-area: 4/2/5/4;
+  }
+  .services__box_11 img {
+    width: 100%;
+  }
+  .serviceWrapper__block {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(./img/singleServiceBg.jpg) no-repeat center right, #0f52ba;
+  }
+  .serviceContent__pain__content {
+    max-width: 250px;
+  }
+  .serviceContent__box {
+    flex-direction: column;
+    padding-bottom: 20px;
+    align-items: flex-start;
+  }
+  .serviceContent__content {
+    width: 100%;
+    margin: 0 10px;
+  }
+  .serviceContent__box img {
+    max-width: none;
+  }
+  .serviceContent__box3 img,
+  .serviceContent__box4 img {
+    order: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .benefits__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .benefits__block_7 {
+    grid-area: 3/1/4/4;
+  }
+  .therapy__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .therapy__block10 {
+    grid-area: 5/2/6/3;
+    background-position: center top;
+  }
+  .contact__wrapper {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer__container {
+    flex-direction: column;
+  }
+  .footer__box:first-of-type {
+    flex-basis: 100%;
+    max-width: none;
+  }
+  .footer__nav {
+    margin-left: 20px;
+  }
+  .aboutWrapper__box {
+    width: 50%;
+  }
+  .contactWrapper__box {
+    padding: 20px;
+  }
+  .contactWrapper__title {
+    font-size: 20px;
+  }
+  .achievements__grid {
+    flex-wrap: wrap;
+  }
+  .achievements__box {
+    flex-basis: 48%;
+    padding: 0 20px;
+  }
+  .achievements__box:not(:last-of-type) {
+    border-right: none;
+  }
+  .contactInfo__container {
+    flex-direction: column;
+  }
+  .contactInfo__grid {
+    justify-content: center;
+  }
+  .doctorsState__title {
+    max-width: none;
+  }
+  .price__item {
+    width: 90%;
+  }
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .services__box_11 {
+    grid-area: 6/1/7/3;
+  }
+  .serviceContent__content h3 {
+    width: 95%;
+  }
+  .doctorsGaranthy__box {
+    flex-basis: 30%;
+    padding: 17px 25px;
+  }
+  .serviceContent__pain {
+    flex-wrap: wrap;
+  }
+  .serviceContent__pain__content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper__block {
+    background-position: top right;
+    background-size: cover;
+  }
+  .wrapper__title {
+    font-size: 36px;
+  }
+  .wrapper__list {
+    font-size: 14px;
+  }
+  .wrapper__btn {
+    font-size: 16px;
+  }
+  .benefits__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .benefits__block_7 {
+    grid-area: 7/1/8/2;
+  }
+  .therapy__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+  }
+  .therapy__block10 {
+    grid-area: 10/1/11/2;
+  }
+  .therapy__header,
+  .review__header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .team__box {
+    flex-basis: 45%;
+  }
+  .team__btn {
+    padding: 6px 30px;
+  }
+  .contact__text {
+    align-items: flex-start;
+  }
+  .contact__desc {
+    text-align: left;
+  }
+  .refer__grid {
+    flex-direction: column;
+  }
+  .contactInfo__box {
+    flex-basis: 45%;
+  }
+  .doctorsState__box {
+    padding: 10px 20px;
+    flex-direction: column;
+  }
+  .doctorsState__img {
+    position: relative;
+    top: 0;
+    bottom: 0;
+  }
+  .doctorsGaranthy__box {
+    flex-basis: 100%;
+    padding: 20px;
+  }
+  .price__box {
+    flex-direction: column;
+  }
+  .services__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, 1fr);
+  }
+  .services__box_11 {
+    grid-area: 11/1/12/2;
+  }
+  .serviceContent__box {
+    flex-basis: 100%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .team__box {
+    flex-basis: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
